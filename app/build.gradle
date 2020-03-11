@@ -46,3 +46,6 @@ dependencies {
     implementation 'com.google.firebase:firebase-ml-vision-object-detection-model:19.0.3'
 }
 apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.github.dcendents.android-maven'
+
+group='com.github.medha742'
