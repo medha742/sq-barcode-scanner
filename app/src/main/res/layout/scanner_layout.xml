@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:keepScreenOn="true">
+
+    <com.scan.sqbarcodescanner.camera.CameraSourcePreview
+        android:id="@+id/camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:rectangle_width="75"
+        app:rectangle_height="35"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintHeight_percent="0.7"
+        >
+
+        <include layout="@layout/camera_preview_overlay_kotlin"/>
+
+    </com.scan.sqbarcodescanner.camera.CameraSourcePreview>
+
+    <include
+        layout="@layout/top_action_bar_in_live_camera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/camera_preview"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

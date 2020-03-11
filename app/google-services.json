@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1079258998481",
+    "firebase_url": "https://sqbarcodescanner.firebaseio.com",
+    "project_id": "sqbarcodescanner",
+    "storage_bucket": "sqbarcodescanner.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1079258998481:android:8cd3b8e8aa20020a3f87f0",
+        "android_client_info": {
+          "package_name": "com.scan.sqbarcodescanner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1079258998481-09n19gkilqjd611encp99u29b6b2lp79.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAi1xPirGFTN-9boUL-NddPzCivm1Iq2YE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1079258998481-09n19gkilqjd611encp99u29b6b2lp79.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

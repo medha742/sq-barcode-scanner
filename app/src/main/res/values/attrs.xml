@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <declare-styleable name="CameraSourcePreview">
+        <attr name="rectangle_width" format="integer" />
+        <attr name="rectangle_height" format="integer"/>
+    </declare-styleable>
+</resources>
