@@ -1,4 +1,4 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'maven'
@@ -9,7 +9,7 @@ android {
     buildToolsVersion "29.0.0"
 
     defaultConfig {
-        applicationId "com.scan.sqbarcodescanner"
+        //applicationId "com.scan.sqbarcodescanner"
         minSdkVersion 16
         targetSdkVersion 29
         versionCode 2
