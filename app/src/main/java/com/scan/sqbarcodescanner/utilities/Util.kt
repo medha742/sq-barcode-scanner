@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.pm.PackageManager
 import android.content.res.Configuration
+import android.graphics.Color
 import android.graphics.Rect
 import android.graphics.RectF
 import android.hardware.Camera
@@ -24,6 +25,8 @@ object Util {
     private val MIN_BARCODE_WIDTH = 50
     var BARCODE_RECT_WIDTH = 75
     var BARCODE_RECT_HEIGHT = 45
+    var BORDER_COLOR:Int? = R.color.white
+    var LASER_COLOR:Int? = R.color.white
     const val ASPECT_RATIO_TOLERANCE = 0.01f
     private val TAG = javaClass.simpleName
 

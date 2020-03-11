@@ -2,6 +2,7 @@ package com.scan.sqbarcodescanner.barcode
 
 
 import android.graphics.*
+import android.icu.util.UniversalTimeScale
 import androidx.core.content.ContextCompat
 import com.scan.sqbarcodescanner.R
 import com.scan.sqbarcodescanner.camera.GraphicOverlay
@@ -9,8 +10,8 @@ import com.scan.sqbarcodescanner.utilities.Util
 
 
 internal class BarcodeScanningGraphic(graphicOverlay: GraphicOverlay) : GraphicOverlay.Graphic(graphicOverlay) {
-    private var mDefaultLaserColor:Int?= ContextCompat.getColor(graphicOverlay.context, R.color.white)
-    private var mDefaultBorderColor:Int?= ContextCompat.getColor(graphicOverlay.context, R.color.white)
+    private var mDefaultLaserColor:Int?= Util.LASER_COLOR
+    private var mDefaultBorderColor:Int?= Util.BORDER_COLOR
     private var scannerAlpha = 0
     private var graphicOverlay:GraphicOverlay?=null
     private var mBorderLineLength = 100

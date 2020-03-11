@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.SurfaceHolder
 import android.view.SurfaceView
 import android.widget.FrameLayout
+import androidx.core.content.ContextCompat
 import com.google.android.gms.common.images.Size
 import com.scan.sqbarcodescanner.R
 import com.scan.sqbarcodescanner.utilities.Util
@@ -31,6 +32,14 @@ class CameraSourcePreview(context: Context, attrs: AttributeSet) : FrameLayout(c
                 R.styleable.CameraSourcePreview, 0, 0)
             val rectangle_width = typedArray.getInt(R.styleable
                 .CameraSourcePreview_rectangle_width,80)
+
+            val laserColor = typedArray.getColor(R.styleable.CameraSourcePreview_center_laser,
+                ContextCompat.getColor(context,R.color.white))
+            val borderColorRectangle = typedArray.getColor(R.styleable.CameraSourcePreview_rectangle_border,
+                ContextCompat.getColor(context,R.color.white))
+            Util.BORDER_COLOR = borderColorRectangle
+            Util.LASER_COLOR = laserColor
+
 
             Util.BARCODE_RECT_WIDTH = rectangle_width
             val rectangle_height = typedArray

@@ -13,6 +13,8 @@
         android:layout_height="0dp"
         app:rectangle_width="75"
         app:rectangle_height="35"
+        app:center_laser="@color/white"
+        app:rectangle_border="@color/white"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constrainedHeight="true"
         app:layout_constraintHeight_percent="0.7"
