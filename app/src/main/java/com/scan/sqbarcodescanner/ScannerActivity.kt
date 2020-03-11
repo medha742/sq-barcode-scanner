@@ -26,7 +26,6 @@ class ScannerActivity : AppCompatActivity(),View.OnClickListener {
     private var preview: CameraSourcePreview? = null
     private var graphicOverlay: GraphicOverlay? = null
     private var flashButton: View? = null
-    private var promptChip: Chip? = null
     private var promptChipAnimator: AnimatorSet? = null
     private var workflowModel: WorkflowModel? = null
     private var currentWorkflowState: WorkflowModel.WorkflowState? = null
@@ -41,10 +40,9 @@ class ScannerActivity : AppCompatActivity(),View.OnClickListener {
             cameraSource = CameraSource(this)
         }
 
-        promptChip = findViewById(R.id.bottom_prompt_chip)
         promptChipAnimator =
             (AnimatorInflater.loadAnimator(this, R.animator.bottom_prompt_chip_enter) as AnimatorSet).apply {
-                setTarget(promptChip)
+                setTarget(bottom_prompt_chip)
             }
 
         findViewById<View>(R.id.close_button).setOnClickListener(this)
@@ -85,33 +83,33 @@ class ScannerActivity : AppCompatActivity(),View.OnClickListener {
             currentWorkflowState = workflowState
             Log.d(TAG, "Current workflow state: ${currentWorkflowState!!.name}")
 
-            val wasPromptChipGone = promptChip?.visibility == View.GONE
+            val wasPromptChipGone = bottom_prompt_chip?.visibility == View.GONE
 
             when (workflowState) {
                 WorkflowModel.WorkflowState.DETECTING -> {
-                    promptChip?.visibility = View.VISIBLE
-                    promptChip?.setText(R.string.prompt_point_at_a_barcode)
+                    bottom_prompt_chip?.visibility = View.VISIBLE
+                    bottom_prompt_chip?.setText(R.string.prompt_point_at_a_barcode)
                     startCameraPreview()
                 }
                 WorkflowModel.WorkflowState.CONFIRMING -> {
-                    promptChip?.visibility = View.VISIBLE
-                    promptChip?.setText(R.string.prompt_move_camera_closer)
+                    bottom_prompt_chip?.visibility = View.VISIBLE
+                    bottom_prompt_chip?.setText(R.string.prompt_move_camera_closer)
                     startCameraPreview()
                 }
                 WorkflowModel.WorkflowState.SEARCHING -> {
-                    promptChip?.visibility = View.VISIBLE
-                    promptChip?.setText(R.string.prompt_searching)
+                    bottom_prompt_chip?.visibility = View.VISIBLE
+                    bottom_prompt_chip?.setText(R.string.prompt_searching)
                     stopCameraPreview()
                 }
                 WorkflowModel.WorkflowState.DETECTED, WorkflowModel.WorkflowState.SEARCHED -> {
-                    promptChip?.visibility = View.GONE
+                    bottom_prompt_chip?.visibility = View.GONE
                     stopCameraPreview()
                 }
-                else -> promptChip?.visibility = View.GONE
+                else -> bottom_prompt_chip?.visibility = View.GONE
             }
 
             val shouldPlayPromptChipEnteringAnimation =
-                wasPromptChipGone && promptChip?.visibility == View.VISIBLE
+                wasPromptChipGone && bottom_prompt_chip?.visibility == View.VISIBLE
             promptChipAnimator?.let {
                 if (shouldPlayPromptChipEnteringAnimation && !it.isRunning) it.start()
             }
