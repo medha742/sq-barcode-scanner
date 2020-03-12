@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-    <declare-styleable name="CameraSourcePreview">
+    <declare-styleable name="MaterialBarcodeView">
         <attr name="rectangle_width" format="integer" />
         <attr name="rectangle_height" format="integer"/>
         <attr name="center_laser" format="color"/>
         <attr name="rectangle_border" format="color"/>
+        <attr name="tools_gravity" format="integer">
+            <enum name="top" value="0"/>
+            <enum name="bottom" value="1"/>
+        </attr>
+        <attr name="tools_visibility" format="integer">
+            <enum name="only_flash" value="0"/>
+            <enum name="only_cross" value="1"/>
+            <enum name="both_flash_cross" value="2"/>
+        </attr>
     </declare-styleable>
 </resources>

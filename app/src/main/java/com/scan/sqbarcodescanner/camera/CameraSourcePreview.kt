@@ -27,32 +27,6 @@ class CameraSourcePreview(context: Context, attrs: AttributeSet) : FrameLayout(c
     private var cameraPreviewSize: Size? = null
 
     init {
-        attrs.let {
-            val typedArray = context.obtainStyledAttributes(it,
-                R.styleable.CameraSourcePreview, 0, 0)
-            val rectangle_width = typedArray.getInt(R.styleable
-                .CameraSourcePreview_rectangle_width,80)
-
-            val laserColor = typedArray.getColor(R.styleable.CameraSourcePreview_center_laser,
-                ContextCompat.getColor(context,R.color.white))
-            val borderColorRectangle = typedArray.getColor(R.styleable.CameraSourcePreview_rectangle_border,
-                ContextCompat.getColor(context,R.color.white))
-            Util.BORDER_COLOR = borderColorRectangle
-            Util.LASER_COLOR = laserColor
-
-
-            Util.BARCODE_RECT_WIDTH = rectangle_width
-            val rectangle_height = typedArray
-                .getInt(R.styleable
-                    .CameraSourcePreview_rectangle_height,
-                    35)
-
-            Util.BARCODE_RECT_HEIGHT = rectangle_height
-
-
-
-            typedArray.recycle()
-        }
 
     }
 

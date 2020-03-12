@@ -27,6 +27,8 @@ object Util {
     var BARCODE_RECT_HEIGHT = 45
     var BORDER_COLOR:Int? = R.color.white
     var LASER_COLOR:Int? = R.color.white
+    var TOOLS_GRAVITY:Int = 0
+    var TOOLS_VISIBILITY:Int = 2
     const val ASPECT_RATIO_TOLERANCE = 0.01f
     private val TAG = javaClass.simpleName
 

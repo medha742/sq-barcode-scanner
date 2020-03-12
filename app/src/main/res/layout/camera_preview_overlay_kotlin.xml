@@ -35,7 +35,7 @@
             android:fontFamily="sans-serif"
             android:textColor="@color/white"
             android:textSize="@dimen/bottom_prompt_chip_text_size"
-            android:visibility="visible"
+            android:visibility="gone"
             app:chipCornerRadius="@dimen/bottom_prompt_chip_corner_radius"
             app:chipSurfaceColor="@color/dark"
             app:closeIconVisible="false"/>
